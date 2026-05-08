@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Palisade Roofing — Five Concepts to Choose From</title>
+<meta name="viewport" content="width=1440" />
+<link rel="stylesheet" href="assets/tokens.css" />
+<style>
+  html, body { margin: 0; background: #F2EFE9; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: #1F2428; min-height: 100vh; }
+  .hub { max-width: 1280px; margin: 0 auto; padding: 56px 48px 80px; }
+  .masthead { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 28px; border-bottom: 1px solid #1F2428; margin-bottom: 56px; }
+  .masthead h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 26px; letter-spacing: -0.01em; margin: 0; }
+  .masthead .meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #3E4A55; display: flex; gap: 24px; }
+  .lede { font-family: 'Fraunces', serif; font-weight: 500; font-size: 56px; line-height: 1.05; letter-spacing: -0.025em; max-width: 920px; margin: 0 0 24px; }
+  .lede em { font-style: italic; color: #3E4A55; }
+  .deck { font-size: 17px; line-height: 1.65; color: #3A3F44; max-width: 760px; margin: 0 0 48px; }
+  .deck strong { color: #1F2428; font-weight: 600; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .card { background: #FAF8F3; border: 1px solid #E7E2D8; text-decoration: none; color: #1F2428; display: flex; flex-direction: column; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(31,36,40,0.10); }
+  .card .thumb { aspect-ratio: 16/9; background-size: cover; background-position: center; position: relative; }
+  .card .thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(31,36,40,0) 30%, rgba(31,36,40,0.55)); }
+  .card .thumb .badge { position: absolute; top: 18px; left: 18px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; background: #F2EFE9; color: #1F2428; padding: 6px 10px; z-index: 2; }
+  .card .thumb .recommend { position: absolute; top: 18px; right: 18px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; background: #A66A3D; color: #F2EFE9; padding: 6px 10px; z-index: 2; }
+  .card .thumb .name { position: absolute; left: 24px; bottom: 20px; font-family: 'Fraunces', serif; font-weight: 600; font-size: 36px; letter-spacing: -0.02em; color: #F2EFE9; z-index: 2; line-height: 1; }
+  .card .body { padding: 24px 26px 22px; display: flex; flex-direction: column; gap: 14px; }
+  .card .sub { font-family: 'Fraunces', serif; font-weight: 500; font-size: 19px; line-height: 1.3; letter-spacing: -0.01em; }
+  .card .meta-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; padding-top: 14px; border-top: 1px solid #E7E2D8; }
+  .card .meta-row > div { }
+  .card .meta-row .k { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #6E7A86; margin-bottom: 4px; }
+  .card .meta-row .v { font-size: 13px; color: #1F2428; }
+  .card .open { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid #E7E2D8; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px; }
+  .card .open .arrow { font-family: 'Fraunces', serif; font-size: 22px; color: #A66A3D; }
+
+  .secondary { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; margin-top: 56px; padding-top: 40px; border-top: 1px solid #D7D2C7; }
+  .panel { background: #FAF8F3; border: 1px solid #E7E2D8; padding: 28px; }
+  .panel h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 24px; letter-spacing: -0.01em; margin: 0 0 14px; }
+  .panel p { font-size: 14.5px; line-height: 1.65; color: #3A3F44; margin: 0; }
+  .panel a.cta { margin-top: 18px; display: inline-block; padding: 12px 18px; background: #1F2428; color: #F2EFE9; text-decoration: none; font-weight: 600; font-size: 13px; }
+  .panel.dark { background: #1F2428; color: #F2EFE9; border-color: #1F2428; }
+  .panel.dark p { color: rgba(242,239,233,0.78); }
+  .panel.dark h3 { color: #F2EFE9; }
+  .panel.dark a.cta { background: #A66A3D; color: #F2EFE9; }
+
+  .footer-line { margin-top: 72px; padding-top: 24px; border-top: 1px solid #D7D2C7; display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #6E7A86; letter-spacing: 0.04em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="hub">
+  <div class="masthead">
+    <h1>Palisade Roofing — Round 2</h1>
+    <div class="meta">
+      <span>Five concepts</span>
+      <span>One locked direction</span>
+      <span>v2.0 · May 2026</span>
+    </div>
+  </div>
+
+  <p class="lede">Five executions of one direction. <em>Considered. Restrained. Recognizably Palisade.</em></p>
+  <p class="deck">All five concepts share the locked palette (slate, cedar, bone, charcoal, brass), the locked typography (Fraunces 600 display, Inter body), the four-step ZIP-first form, the trust triplet, the sticky tap-to-call, and the same NAP and 14-city footprint. They differ only in <strong>hero pattern, photo prominence, form prominence, and reading load.</strong> Click any card to open the standalone landing page.</p>
+
+  <div class="grid">
+
+    <a class="card" href="pages/a.html">
+      <div class="thumb" style="background-image: url('assets/img/01-aerial-traditional.jpeg');">
+        <span class="badge">A · Ridgeline</span>
+        <span class="name">Ridgeline</span>
+      </div>
+      <div class="body">
+        <div class="sub">The textbook execution. 60% drone aerial, 40% bone form panel — the form is in the hero, where most homeowners expect it.</div>
+        <div class="meta-row">
+          <div><div class="k">Hero</div><div class="v">Photo + form</div></div>
+          <div><div class="k">For</div><div class="v">Default homeowner</div></div>
+          <div><div class="k">Form</div><div class="v">In hero · high</div></div>
+        </div>
+        <div class="open">Open landing page <span class="arrow">→</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="pages/c.html">
+      <div class="thumb" style="background-image: url('assets/img/02-aerial-wraparound.jpeg');">
+        <span class="badge">C · The Protocol</span>
+        <span class="recommend">★ Recommended</span>
+        <span class="name">The Protocol</span>
+      </div>
+      <div class="body">
+        <div class="sub">Carries Concept 5's structure — Inspect / Document / Estimate / Restore — without the dispatch-board urgency. The form is highest-prominence here.</div>
+        <div class="meta-row">
+          <div><div class="k">Hero</div><div class="v">50/50 protocol + form</div></div>
+          <div><div class="k">For</div><div class="v">Mid-decision / damage</div></div>
+          <div><div class="k">Form</div><div class="v">Highest</div></div>
+        </div>
+        <div class="open">Open landing page <span class="arrow">→</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="pages/b.html">
+      <div class="thumb" style="background-image: url('assets/img/04-metal-roof.jpeg');">
+        <span class="badge">B · Quiet Type</span>
+        <span class="name" style="color: #F2EFE9;">Quiet Type</span>
+      </div>
+      <div class="body">
+        <div class="sub">No hero photo. A typography-only opening — Fraunces 108px — followed by deep-scroll photography. Reads like a primary source.</div>
+        <div class="meta-row">
+          <div><div class="k">Hero</div><div class="v">Typography only</div></div>
+          <div><div class="k">For</div><div class="v">Considered shopper</div></div>
+          <div><div class="k">Form</div><div class="v">CTA → page</div></div>
+        </div>
+        <div class="open">Open landing page <span class="arrow">→</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="pages/d.html">
+      <div class="thumb" style="background-image: url('assets/img/07-owner-christian.jpeg'); background-position: center 20%;">
+        <span class="badge">D · Owner Portrait</span>
+        <span class="name">Owner Portrait</span>
+      </div>
+      <div class="body">
+        <div class="sub">Christian becomes the primary hero element. A direct quote, a signature, a face. The strongest answer to "burned-before" homeowners.</div>
+        <div class="meta-row">
+          <div><div class="k">Hero</div><div class="v">Portrait + quote</div></div>
+          <div><div class="k">For</div><div class="v">Burned-before homeowner</div></div>
+          <div><div class="k">Form</div><div class="v">CTA → page</div></div>
+        </div>
+        <div class="open">Open landing page <span class="arrow">→</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="pages/e.html" style="grid-column: span 2;">
+      <div class="thumb" style="background-image: url('assets/img/03-aerial-suburban.jpeg'); aspect-ratio: 32/9;">
+        <span class="badge">E · Reading Room</span>
+        <span class="name">Reading Room</span>
+      </div>
+      <div class="body" style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: start;">
+        <div class="sub" style="font-size: 21px;">A long-form magazine-editorial layout. Wider gutters, slower scroll, deeper Q&amp;A, sidebar pull-quotes. For homeowners who actually read before they call. The highest AI-citation density of the five.</div>
+        <div class="meta-row" style="border-top: none; padding-top: 0;">
+          <div><div class="k">Hero</div><div class="v">Editorial masthead</div></div>
+          <div><div class="k">For</div><div class="v">Older / literate</div></div>
+          <div><div class="k">Form</div><div class="v">CTA → page</div></div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="secondary">
+    <div class="panel dark">
+      <h3>Recommendation: C — The Protocol</h3>
+      <p>It carries the structure the owners already chose (Concept 5's four-step Protocol, ZIP-first form, stat strip), drops the dispatch-board urgency they didn't want, keeps the form at highest prominence, and holds even if Christian's pending on-roof portrait doesn't land in the next 30 days. If that shot slips, B becomes the typography-led alternative — same restraint, no portrait dependency.</p>
+      <a class="cta" href="pages/c.html">Open the recommendation →</a>
+    </div>
+    <div class="panel">
+      <h3>See all artboards on one canvas</h3>
+      <p>Hero, mobile, stat band, services, reviews, footer, comparison matrix, sticky bar, and the full <span class="num" style="font-family: 'JetBrains Mono', monospace;">/free-roof-estimate/</span> form flow — all five concepts laid out side-by-side on a pan/zoom canvas.</p>
+      <a class="cta" href="Palisade Roofing — 5 Concepts.html">Open the canvas →</a>
+    </div>
+  </div>
+
+  <div class="footer-line">
+    <span>Palisade Roofing LLC · 154 Old Turnpike Rd · Jonesborough, TN 37659</span>
+    <span>(423) 549-2065</span>
+  </div>
+</div>
+</body>
+</html>

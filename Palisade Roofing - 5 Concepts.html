@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Palisade Roofing — 5 Landing-Page Concepts (Round 2)</title>
+<meta name="viewport" content="width=1440" />
+<link rel="stylesheet" href="assets/tokens.css" />
+<style>
+  html, body { margin: 0; background: #1F2428; height: 100%; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: #1F2428; }
+  .canvas-intro { color: #F2EFE9; padding: 32px 48px 0; }
+  .canvas-intro h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 32px; letter-spacing: -0.01em; margin: 0 0 8px; color: #F2EFE9; }
+  .canvas-intro p { color: rgba(242,239,233,0.7); max-width: 880px; line-height: 1.6; font-size: 14px; margin: 0; }
+  .canvas-intro .meta { display: flex; gap: 24px; margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(242,239,233,0.55); letter-spacing: 0.04em; text-transform: uppercase; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="vendor/design-canvas.jsx"></script>
+<script type="text/babel" src="assets/shared.jsx"></script>
+<script type="text/babel" src="concepts/concept-a.jsx"></script>
+<script type="text/babel" src="concepts/concept-b.jsx"></script>
+<script type="text/babel" src="concepts/concept-c.jsx"></script>
+<script type="text/babel" src="concepts/concept-d.jsx"></script>
+<script type="text/babel" src="concepts/concept-e.jsx"></script>
+<script type="text/babel" src="concepts/free-estimate.jsx"></script>
+<script type="text/babel" src="concepts/footer-and-matrix.jsx"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react">
+const { useState } = React;
+
+const Intro = () => (
+  <div className="canvas-intro">
+    <h1>Palisade Roofing — Round 2 · Five executions, one locked direction.</h1>
+    <p>All five concepts share the locked palette (slate · cedar · bone · charcoal · brass), the locked type (Fraunces 600 display, Inter 400/500/600 body), the four-step ZIP-first form, the trust triplet, and the sticky tap-to-call. They differ in <em>hero pattern, photo prominence, form prominence, and reading load</em>. Drag artboards to reorder. Click any artboard to focus.</p>
+    <div className="meta">
+      <span>5 concepts · A–E</span>
+      <span>Desktop 1440 × 900</span>
+      <span>Mobile 375 × 812</span>
+      <span>+ /free-roof-estimate/ + footer + matrix</span>
+    </div>
+  </div>
+);
+
+const App = () => {
+  return (
+    <DesignCanvas storageKey="palisade-r2" intro={<Intro />}>
+      <DCSection id="overview" title="0 · Overview & Recommendation">
+        <DCArtboard id="matrix" label="Comparison matrix · 5 concepts × 8 criteria" width={1440} height={780}>
+          <ComparisonMatrix />
+        </DCArtboard>
+      </DCSection>
+
+      <DCSection id="concept-a" title="A · Ridgeline — 60/40 photo+form, default homeowner">
+        <DCArtboard id="a-hero-d" label="Desktop hero · 1440 × 900" width={1440} height={900}>
+          <ConceptA_HeroDesktop />
+        </DCArtboard>
+        <DCArtboard id="a-hero-m" label="Mobile hero · 375 × 812" width={375} height={812}>
+          <ConceptA_HeroMobile />
+        </DCArtboard>
+        <DCArtboard id="a-stat" label="Stat band · slate, all-caps tabular" width={1440} height={140}>
+          <ConceptA_StatBand />
+        </DCArtboard>
+        <DCArtboard id="a-services" label="Services · 4-card grid with price ranges" width={1440} height={730}>
+          <ConceptA_Services />
+        </DCArtboard>
+        <DCArtboard id="a-reviews" label="Verifiable reviews · paragraph + 3 static tiles" width={1440} height={520}>
+          <ConceptA_Reviews />
+        </DCArtboard>
+        <DCArtboard id="a-why" label="Why Palisade · slate inversion, numbered" width={1440} height={780}>
+          <ConceptA_Why />
+        </DCArtboard>
+      </DCSection>
+
+      <DCSection id="concept-b" title="B · Quiet Type — typography-only hero, considered shopper">
+        <DCArtboard id="b-hero-d" label="Desktop hero · no photo · Fraunces 108px" width={1440} height={900}>
+          <ConceptB_HeroDesktop />
+        </DCArtboard>
+        <DCArtboard id="b-hero-m" label="Mobile hero" width={375} height={812}>
+          <ConceptB_HeroMobile />
+        </DCArtboard>
+        <DCArtboard id="b-stat" label="Stat strip · hairline rules" width={1440} height={150}>
+          <ConceptB_StatStrip />
+        </DCArtboard>
+        <DCArtboard id="b-qa" label="Q&A H2 · first-sentence answers" width={1440} height={1180}>
+          <ConceptB_QA />
+        </DCArtboard>
+        <DCArtboard id="b-compare" label="Comparison table · asphalt / metal / repair" width={1440} height={620}>
+          <ConceptB_CompareTable />
+        </DCArtboard>
+        <DCArtboard id="b-reviews" label="Verifiable-reviews paragraph (verbatim)" width={1440} height={400}>
+          <ConceptB_Reviews />
+        </DCArtboard>
+      </DCSection>
+
+      <DCSection id="concept-c" title="C · The Protocol — recommended; 4-step protocol + form prominent">
+        <DCArtboard id="c-hero-d" label="Desktop hero · 50/50 · protocol + form" width={1440} height={900}>
+          <ConceptC_HeroDesktop />
+        </DCArtboard>
+        <DCArtboard id="c-hero-m" label="Mobile hero · stacked protocol" width={375} height={812}>
+          <ConceptC_HeroMobile />
+        </DCArtboard>
+        <DCArtboard id="c-stat" label="Stat strip" width={1440} height={140}>
+          <ConceptC_StatBand />
+        </DCArtboard>
+        <DCArtboard id="c-during" label="During the install · top-down + copy" width={1440} height={620}>
+          <ConceptC_DuringInstall />
+        </DCArtboard>
+        <DCArtboard id="c-services" label="Services · in-line with hairlines" width={1440} height={460}>
+          <ConceptC_Services />
+        </DCArtboard>
+      </DCSection>
+
+      <DCSection id="concept-d" title="D · Owner Portrait — Christian as primary; burned-before buyer">
+        <DCArtboard id="d-hero-d" label="Desktop hero · portrait + quote" width={1440} height={900}>
+          <ConceptD_HeroDesktop />
+        </DCArtboard>
+        <DCArtboard id="d-hero-m" label="Mobile hero · portrait stacked" width={375} height={812}>
+          <ConceptD_HeroMobile />
+        </DCArtboard>
+        <DCArtboard id="d-stat" label="Stat band" width={1440} height={140}>
+          <ConceptD_StatBand />
+        </DCArtboard>
+        <DCArtboard id="d-promise" label="Four commitments, signed" width={1440} height={620}>
+          <ConceptD_Promise />
+        </DCArtboard>
+        <DCArtboard id="d-reviews" label="Reviews · slate, gold accents" width={1440} height={620}>
+          <ConceptD_Reviews />
+        </DCArtboard>
+      </DCSection>
+
+      <DCSection id="concept-e" title="E · Reading Room — long-form editorial, literate buyer">
+        <DCArtboard id="e-hero-d" label="Desktop hero · masthead + pull quote" width={1440} height={900}>
+          <ConceptE_HeroDesktop />
+        </DCArtboard>
+        <DCArtboard id="e-hero-m" label="Mobile hero · editorial stacked" width={375} height={812}>
+          <ConceptE_HeroMobile />
+        </DCArtboard>
+        <DCArtboard id="e-editorial" label="Editorial Q&A · sidebar pull-quote" width={1440} height={620}>
+          <ConceptE_Editorial />
+        </DCArtboard>
+        <DCArtboard id="e-compare" label="Comparison table" width={1440} height={580}>
+          <ConceptE_CompareTable />
+        </DCArtboard>
+      </DCSection>
+
+      <DCSection id="form" title="F · /free-roof-estimate/ — the form, mid-flow + post-submit">
+        <DCArtboard id="f-d" label="Step 2 · roof age + home size · desktop" width={1440} height={900}>
+          <FreeEstimateDesktop />
+        </DCArtboard>
+        <DCArtboard id="f-m" label="Step 3 · ZIP autofocus · mobile" width={375} height={812}>
+          <FreeEstimateMobile />
+        </DCArtboard>
+        <DCArtboard id="f-post" label="Post-submit · Calendly inline · desktop" width={1440} height={900}>
+          <FreeEstimatePostSubmit />
+        </DCArtboard>
+      </DCSection>
+
+      <DCSection id="footer" title="G · Footer · sticky bar · NAP · 14 cities · YouTube placeholder">
+        <DCArtboard id="g-footer" label="Site footer · slate · NAP · cities · video slot" width={1440} height={500}>
+          <PalFooter />
+        </DCArtboard>
+        <DCArtboard id="g-sticky" label="Sticky tap-to-call · mobile (mid-scroll mock)" width={750} height={220}>
+          <StickyBarShowcase />
+        </DCArtboard>
+      </DCSection>
+    </DesignCanvas>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

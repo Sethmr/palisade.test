@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<base href="../" />
+<title>Palisade Roofing — D · Owner Portrait</title>
+<meta name="viewport" content="width=1440" />
+<link rel="stylesheet" href="assets/tokens.css" />
+<style>
+  html, body { margin: 0; background: #F2EFE9; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: #1F2428; }
+  .concept-bar { position: fixed; top: 16px; right: 16px; z-index: 1000; display: flex; align-items: center; gap: 6px; padding: 8px; background: #1F2428; color: #F2EFE9; border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; box-shadow: 0 4px 24px rgba(0,0,0,0.18); }
+  .concept-bar a { color: rgba(242,239,233,0.6); padding: 6px 10px; text-decoration: none; border-radius: 1px; font-weight: 600; }
+  .concept-bar a.active { background: #A66A3D; color: #F2EFE9; }
+  .concept-bar a:hover { color: #F2EFE9; }
+  .concept-bar .label { padding: 6px 10px; color: rgba(242,239,233,0.45); border-right: 1px solid rgba(242,239,233,0.18); }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="assets/shared.jsx"></script>
+<script type="text/babel" src="concepts/concept-a.jsx"></script>
+<script type="text/babel" src="concepts/concept-b.jsx"></script>
+<script type="text/babel" src="concepts/concept-c.jsx"></script>
+<script type="text/babel" src="concepts/concept-d.jsx"></script>
+<script type="text/babel" src="concepts/concept-e.jsx"></script>
+<script type="text/babel" src="concepts/footer-and-matrix.jsx"></script>
+<script type="text/babel" src="concepts/pages.jsx"></script>
+</head>
+<body>
+<div id="root"></div>
+<div class="concept-bar">
+    <span class="label">Concept</span>
+    <a href="pages/a.html" class="">A · Ridgeline</a><a href="pages/b.html" class="">B · Quiet Type</a><a href="pages/c.html" class="">C · The Protocol</a><a href="pages/d.html" class="active">D · Owner Portrait</a><a href="pages/e.html" class="">E · Reading Room</a>
+    <a href="index.html" style="color: rgba(184,148,90,0.95); border-left: 1px solid rgba(242,239,233,0.18); margin-left: 4px;">← All</a>
+  </div>
+<script type="text/babel" data-presets="react">
+ReactDOM.createRoot(document.getElementById('root')).render(<PageD />);
+</script>
+</body>
+</html>
